@@ -26,7 +26,8 @@
 
     scannedTextObj.forEach((book) => {
         book.Content.forEach((content) => {
-            let regex = new RegExp("\\b" + searchTerm + "\\b");
+            let escapedSearchTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            let regex = new RegExp("\\b" + escapedSearchTerm + "\\b");
             if (regex.test(content.Text)) {
                 result.Results.push({
                     "ISBN": book.ISBN,
