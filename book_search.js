@@ -213,7 +213,7 @@ const negativeTest1Expected = {
     "SearchTerm": "nonexistent",
     "Results": []
 }
-if (negativeTest1.Results.length == 0) {
+if (negativeTest1.Results.length === 0) {
     console.log("PASS: Negative Test 1");
 } else {
     console.log("FAIL: Negative Test 1");
@@ -224,7 +224,7 @@ const negativeTest2Expected = {
     "SearchTerm": "impossible",
     "Results": []
 }
-if (negativeTest2.Results.length == 0) {
+if (negativeTest2.Results.length === 0) {
     console.log("PASS: Negative Test 2");
 } else {
     console.log("FAIL: Negative Test 2");
